@@ -4,40 +4,11 @@
 <meta charset="UTF-8">
 <title>Media</title>
 <script src="phonegap-1.1.0.js"></script>
-<script type="text/javascript" charset="utf-8">
-        // Audio player
-        function reproducirAudio(origen) {
-			//reproductor basico
-		    var mi_audio = new Media(origen, todoSalioBien, hayErrores);
-            	mi_audio.play();
-        }
-        function todoSalioBien(){
-        	alert("el audio esta listo!!!")
-        }
-        function hayErrores(e){
-        	alert("error!!!")
-        }
-		
-		function playStream() {
-  try {
-    var myaudio = new Audio('http://72.29.87.97:8180/);
-    myaudio.id = 'playerMyAdio';
-    myaudio.play();
-  } catch (e) {
-    alert('no audio support!');
-  } 
-}
-</script>
 </head>
 
 <body>
-<button onclick="reproductor.play()"></button>
-<button><p onclick="reproductor.play();">Click to Play MP3</p></button>
-
-<button onClick="reproducirAudio('test.mp3');">
-            Activar Audio!!!
- </button>
- 
- <button onclick="playStream()">Listen Live</button>
+<audio id="id1" src="test.mp3"></audio>
+<button onClick="document.getElementById('id1').play()">Play</button>
+<button onClick="document.getElementById('id1').pause()">Stop</button>
 </body>
 </html>
